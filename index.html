@@ -58,7 +58,7 @@
 <script>
 (function () {
   var tg = (window.Telegram && window.Telegram.WebApp) || null;
-  var inTelegram = !!(tg && tg.initData);
+  var inTelegram = !!(tg && tg.platform && tg.platform !== 'unknown');
   if (tg) {
     try { tg.ready(); tg.expand(); tg.enableClosingConfirmation(); } catch (e) {}
   }
